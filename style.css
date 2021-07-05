@@ -1,3 +1,6 @@
+html{
+    scroll-behavior: smooth;
+}
 body{
     font-family: 'Poppins', sans-serif;
     margin: 0;
@@ -20,17 +23,24 @@ section{
     text-decoration: none;
     display: inline-block;
     color: #ffffff;
-    font-size: 24px;
+    font-size: 22px;
     border-radius: 5px;
-    padding: 10px 40px;
+    padding: 8px 30px;
+    transition: all .3s ease;
+    border: 1px solid #dc143c;
+}
+.link-button:hover{
+    border: 1px solid #dc143c;
+    background-color: #ffffff;
+    color: #dc143c;
 }
 .section-title {
     text-align: center;
-    margin-bottom: 50px;
+    margin-bottom: 30px;
 }
 .section-title h2{
     margin: 0;
-    font-size: 30px;
+    font-size: 40px;
 }
 .section-title h4{
     margin: 0;
@@ -58,17 +68,33 @@ section{
     top: 50%;
     right: 41%;
 }
-section.banner{
+.banner{
     background-image: url(./images/portfolio-removebg-preview.png);
     background-color: #1c150b;
     background-repeat: no-repeat;
     background-position: top right;
+    background-attachment: fixed;
     min-height: 100vh;
     padding: 0;
+    display: flex;
+    align-items: center;
+    /* margin-top: 80px; */
 }
 .header{
     display: flex;
     justify-content: space-between;
+    position: fixed;
+    margin: 0 auto;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #1c150b;
+    z-index: 10000;
+    margin: 0;
+    box-sizing: border-box;
+}
+.logo{
+    padding-left: 10%;
 }
 .logo h4{
     text-transform: capitalize;
@@ -82,10 +108,14 @@ section.banner{
 .logo h4 span{
     color: #dc143c;
 }
+.menu{
+    padding-right: 10%;
+}
 .menu ul{
     list-style: none;
     margin: 0;
     padding: 20px 0;
+    line-height: 3;
 }
 .menu ul li{
     display: inline-block;
@@ -95,9 +125,12 @@ section.banner{
     text-decoration: none;
     color: #ffffff;
     padding: 0 5px;
+    transition: all .3s ease;
+}
+.menu ul li a:hover{
+    color: #dc143c;
 }
 .banner .content{
-    margin-top: 100px;
 }
 .banner .content h3{
     color: #ffffff;
@@ -128,7 +161,7 @@ section.banner{
 }
 .about-content{
     flex: 0 0 50%;
-    margin-top: 20px;
+    margin-top: 50px;
 }
 .about-content p{
     text-align: justify;
@@ -147,31 +180,212 @@ section.banner{
     right: 39%;
     background-color: #fff;
 }
-.service .service-items{
+.service .service-items,
+.team .team-members{
     display: flex;
 }
-.service .service-item{
-    flex: 31%;
+.service .service-item,
+.team .team-member{
+    flex: 0 0 31%;
     padding: 20px;
     margin: 0 1%;
     box-sizing: border-box;
-    box-shadow: 1px 1px 5px gray;
     background-color: #222;
     text-align: center;
-    transition: all .3s;
+    border-radius: 5px;
+    transition: all .3s ease;
     
 }
-.service .service-item:hover{
+.service .service-item:hover,
+.team .team-member:hover{
     background-color: #dc143c;
-    transform: scaleY(1.2);
 }
-.service .service-item span i{
+.service .service-item .service-icon{
     color: #ffffff;
     font-size: 50px;
 }
-.service .service-item h3{
+.service .service-item h3,
+.team .team-member h3{
     color: #ffffff;
 }
-.service .service-item p{
+.service .service-item p,
+.team .team-member p{
     color: #ffffff;
+}
+
+.skills{
+    background-color: #ffffff;
+}
+.skills .section-title h4::before {
+    left: 40%;
+}
+.skills .section-title h4::after {
+    right: 40%;
+}
+.skills .width{
+    flex: 0 0 50%;
+}
+.skills-content h3{
+    margin: 0;
+}
+.skills-content p{
+    text-align: justify;
+}
+.skills .skill-items{
+    padding-left: 5%;
+    box-sizing: border-box;
+}
+.skills .skill-item{
+    margin-bottom: 15px;
+}
+.skills .skill-name-percent{
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+}
+.skills .skill-name-percent h4{
+    margin: 0 0 6px 0;
+    font-size: 18px;
+}
+.skills .skill-limit{
+    background-color: #d3d3d3;
+    height: 4px;
+    position: relative;
+}
+.skills .skill-limit::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    background-color: #dc143c;
+}
+.skills .skill-limit.one::before{
+    width: 90%;
+}
+.skills .skill-limit.two::before{
+    width: 60%;
+}
+.skills .skill-limit.three::before{
+    width: 70%;
+}
+.skills .skill-limit.four::before{
+    width: 80%;
+}
+.skills .skill-limit.five::before{
+    width: 50%;
+}
+.team{
+    background-color: #111111;
+}
+.team .section-title h2{
+    color: #fff;
+}
+.team .section-title h4::before {
+    left: 39%;
+    background-color: #ffffff;
+}
+.team .section-title h4::after {
+    right: 39%;
+    background-color: #ffffff;
+}
+.team .team-member img{
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    max-width: 100%;
+    border-radius: 50%;
+    border: 5px solid #dc143c;
+}
+.team .team-member:hover img{
+    border: 5px solid #ffffff;
+    width: 150px;
+    height: 150px;
+}
+.contact .section-title h4::before {
+    left: 39%;
+}
+.contact .section-title h4::after {
+    right: 39%;
+}
+.contact .contact-details,
+.contact-form{
+    flex: 0 0 50%;
+}
+.contact .contact-details{
+    padding-right: 5%;
+    box-sizing: border-box;
+}
+.contact .contact-details p{
+    text-align: justify;
+}
+.contact .contact-details .user{
+    display: flex;
+    margin-bottom: 20px;
+}
+.contact .contact-details .user .user-icon{
+    margin-top: 4px;
+    font-size: 25px;
+    color: #dc143c;
+}
+.contact .contact-details .user .user-bio{
+    margin-left: 20px;
+}
+.contact .contact-details .user .user-bio h4{
+    margin: 0;
+}
+.contact .contact-details .user .user-bio p{
+    margin: 0;
+}
+
+.clearfix::after{
+    content: '';
+    clear: both;
+    display: table;
+}
+.contact .contact-form .input-group .input.float-left {
+    width: 48%;
+    float: left;
+}
+.contact .contact-form .input-group .input.float-left:nth-child(2){
+    margin-left: 4%;
+}
+.contact .contact-form .input{
+    border: 1px solid #d3d3d3;
+    outline: none;
+    padding: 20px;
+    box-sizing: border-box;
+    width: 100% ;
+    margin-bottom: 10px;
+}
+
+footer{
+    background-color: #111111;
+    padding: 15px 0;
+}
+footer p{
+    text-align: center;
+    color: #fff;
+    margin: 0;
+}
+footer p a{
+    color: #dc143c;
+    text-decoration: none;
+}
+
+.scroll-up-btn{
+    position: fixed;
+    right: 20px;
+    bottom: 12px;
+    height: 40px;
+    width: 40px;
+    background-color: #dc143c;
+    text-align: center;
+}
+.scroll-up-btn a{
+    font-size: 20px;
+    cursor: pointer;
+    line-height: 40px;
+    text-decoration: none;
+    color: #fff;
 }
