@@ -11,7 +11,7 @@ section{
     padding: 80px 0;
 }
 section#home{
-    padding-bottom: 0;
+    padding: 0;
 }
 .container{
     width: 80%;
@@ -98,27 +98,26 @@ section#home{
 }
 .logo{
     padding-left: 10%;
+    padding: 10px 0 10px 10%;
 }
-.logo h4{
+.logo a{
     text-transform: capitalize;
     font-weight: bold;
     font-size: 30px;
     color: #ffffff;
     margin: 0;
-    padding: 20px 0;
     letter-spacing: 2px;
+    text-decoration: none;
 }
-.logo h4 span{
+.logo a span{
     color: #dc143c;
 }
 .menu{
-    padding-right: 10%;
+    padding: 10px 10% 10px 0;
 }
 .menu ul{
     list-style: none;
     margin: 0;
-    padding: 20px 0;
-    line-height: 3;
 }
 .menu ul li{
     display: inline-block;
@@ -127,7 +126,7 @@ section#home{
     display: block;
     text-decoration: none;
     color: #ffffff;
-    padding: 0 5px;
+    padding: 10px 5px;
     transition: all .3s ease;
 }
 .menu ul li a:hover{
