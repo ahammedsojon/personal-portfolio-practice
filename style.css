@@ -133,9 +133,45 @@ section.banner{
 .about-content p{
     text-align: justify;
 }
+.service{
+    background-color: #111111;
+}
+.service .section-title h2{
+    color: #ffffff;
+}
 .service .section-title h4::before {
     left: 39%;
+    background-color: #fff;
 }
 .service .section-title h4::after {
     right: 39%;
+    background-color: #fff;
+}
+.service .service-items{
+    display: flex;
+}
+.service .service-item{
+    flex: 31%;
+    padding: 20px;
+    margin: 0 1%;
+    box-sizing: border-box;
+    box-shadow: 1px 1px 5px gray;
+    background-color: #222;
+    text-align: center;
+    transition: all .3s;
+    
+}
+.service .service-item:hover{
+    background-color: #dc143c;
+    transform: scaleY(1.2);
+}
+.service .service-item span i{
+    color: #ffffff;
+    font-size: 50px;
+}
+.service .service-item h3{
+    color: #ffffff;
+}
+.service .service-item p{
+    color: #ffffff;
 }
