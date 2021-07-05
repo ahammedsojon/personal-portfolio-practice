@@ -10,6 +10,9 @@ body{
 section{
     padding: 80px 0;
 }
+section#home{
+    padding-bottom: 0;
+}
 .container{
     width: 80%;
     margin: 0 auto;
