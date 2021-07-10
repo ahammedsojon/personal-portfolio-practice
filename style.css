@@ -182,36 +182,40 @@ section#home{
     right: 39%;
     background-color: #fff;
 }
-.service .service-items,
-.team .team-members{
-    display: flex;
+.service-item,
+.team-member{
+        position: relative;
+        flex: 0 0 31%;
+            border-radius: 10px;
+            overflow: hidden;
+            margin: 0 1%;
 }
-.service .service-item,
-.team .team-member{
-    flex: 0 0 31%;
+.service-item:hover .service-item-content,
+.team-member:hover .team-member-content{
+    background-color: #dc143c;
+    transform: scale(1.1);
+}
+.service .service-item-content,
+.team .team-member-content{
     padding: 20px;
-    margin: 0 1%;
-    box-sizing: border-box;
     background-color: #222;
     text-align: center;
-    border-radius: 5px;
-    transition: all .3s ease;
-    
+    transition: all .3s ease ;
 }
-.service .service-item:hover,
-.team .team-member:hover{
+/* .service .service-item:hover{
     background-color: #dc143c;
-}
-.service .service-item .service-icon{
+    transform: scale(1);
+} */
+.service .service-item-content .service-icon{
     color: #ffffff;
     font-size: 50px;
 }
-.service .service-item h3,
-.team .team-member h3{
+.service .service-item-content  h3,
+.team .team-member-content h3{
     color: #ffffff;
 }
-.service .service-item p,
-.team .team-member p{
+.service .service-item-content  p,
+.team .team-member-content p{
     color: #ffffff;
 }
 
@@ -291,7 +295,7 @@ section#home{
     right: 39%;
     background-color: #ffffff;
 }
-.team .team-member img{
+.team .team-member-content img{
     width: 150px;
     height: 150px;
     object-fit: cover;
@@ -299,7 +303,7 @@ section#home{
     border-radius: 50%;
     border: 5px solid #dc143c;
 }
-.team .team-member:hover img{
+.team .team-member-content:hover img{
     border: 5px solid #ffffff;
     width: 150px;
     height: 150px;
